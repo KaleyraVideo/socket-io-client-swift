@@ -1,17 +1,21 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.7
 
 import PackageDescription
 
 let package = Package(
-    name: "SocketIO",
+    name: "KaleyraSocketIO",
     products: [
-        .library(name: "SocketIO", targets: ["SocketIO"])
+        .library(name: "KaleyraSocketIO", targets: ["KaleyraSocketIO"])
     ],
     dependencies: [
-        .package(url: "https://github.com/daltoniam/Starscream", .exactItem("4.0.6")),
+        .package(url: "https://github.com/KaleyraVideo/Starscream", exact: "4.0.6")
     ],
     targets: [
-        .target(name: "SocketIO", dependencies: ["Starscream"]),
-        .testTarget(name: "TestSocketIO", dependencies: ["SocketIO"]),
+        .target(name: "KaleyraSocketIO",
+                dependencies: [.product(name: "Starscream",
+                                        package: "Starscream",
+                                        moduleAliases: ["Starscream" : "KaleyraStarscream"])],
+                path: "Source/SocketIO"),
+        .testTarget(name: "TestSocketIO", dependencies: ["KaleyraSocketIO"]),
     ]
 )

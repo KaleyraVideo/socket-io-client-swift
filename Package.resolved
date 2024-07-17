@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Starscream",
-        "repositoryURL": "https://github.com/daltoniam/Starscream",
-        "state": {
-          "branch": null,
-          "revision": "ac6c0fc9da221873e01bd1a0d4818498a71eef33",
-          "version": "4.0.6"
-        }
+  "pins" : [
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KaleyraVideo/Starscream",
+      "state" : {
+        "revision" : "7fef2aba0117ba33b31e16133403b4fc429d192a",
+        "version" : "4.0.6"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }
